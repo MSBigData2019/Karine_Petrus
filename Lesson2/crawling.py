@@ -5,6 +5,16 @@ Created on Tue Oct  9 20:03:22 2018
 
 @author: karine
 """
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Oct  7 16:24:44 2018
+
+@author: karine
+"""
+
+# coding: utf-8
 import requests
 import unittest
 import numpy as np
@@ -57,8 +67,8 @@ def get_quarter_endingDecember(soup):
 def get_share_evolution_data(soup):
         shareprice=soup.find("div",class_="sectionQuoteDetail")
         sharechange=soup.find("div",class_="sectionQuote priceChange")
-        priceshare=re.findall("\d\d\.\d\d",shareprice.text)
-        sharechange=re.findall("\d.\d\d",sharechange.text)
+        priceshare=re.findall("\d\d*.\d\d",shareprice.text)
+        sharechange=re.findall("\d*.\d\d",sharechange.text)
         return sharechange, priceshare
 
 def get_share_owned(soup):   

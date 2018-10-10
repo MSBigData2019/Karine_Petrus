@@ -5,7 +5,7 @@ Nombre (# of Estimates) : 16
 Moyenne :13,105.80 avec pour intervalle : [13,199.00  :  13,199.00]
 
 Action
-Prix = 04.55 Evolution (euros) : 6.35 Evolution (%) : 5.73
+Prix = 104.55 Evolution (euros) : 6.35 Evolution (%) : 5.73
 
 Shares Owned des investisseurs : 45.38%
 
