@@ -5,16 +5,6 @@ Created on Tue Oct  9 20:03:22 2018
 
 @author: karine
 """
-
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Oct  7 16:24:44 2018
-
-@author: karine
-"""
-
-# coding: utf-8
 import requests
 import unittest
 import numpy as np
