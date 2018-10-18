@@ -41,6 +41,7 @@ def get_contributor_list(html_doc):
 
 def get_repository(list_contrib):
     token="e77f75ebc67dc1c0d161ed8a4d540bfa76de943c"
+    token="7f976f25b1724cfef8e92f05c852264a298bea81"
     user="karinep"
     nbstar={}
     meanstar={}
