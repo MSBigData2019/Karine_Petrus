@@ -50,7 +50,7 @@ def get_repository(list_contrib):
         repository = json.loads(rest.content)
         star=0.
         for rep in repository:
-            star=star+rep['stargazers_count']
+            star=star+rep["stargazers_count"]  
         nbstar[name]=star
         meanstar[name]=star/len(repository)
     sorted(meanstar.values())
