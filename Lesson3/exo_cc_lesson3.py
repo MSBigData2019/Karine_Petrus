@@ -33,9 +33,9 @@ def query(html_doc):
     doc1=doc.find('tr').findNext('td')    
     city=[]
     for i in range(0,100):
-        textcity=doc1.text.split()
+        textcity=doc1.split()
         city.append(textcity[1])
-        doc1=doc.find("tr").findNext('tr')
+        doc1=doc1.find("tr").findNext('tr')
     pd.DataFrame(city)
     print(city)
     print()

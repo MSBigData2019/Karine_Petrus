@@ -18,6 +18,7 @@ from sklearn import linear_model
 import statsmodels.api as sm
 import requests
 import json
+
 from operator import itemgetter
 from multiprocessing import Pool
 
@@ -31,8 +32,8 @@ def get_contributor_list(html_doc):
     html_doc =  res.text
     doc= BeautifulSoup(html_doc, "html.parser")
     table=doc.find('th')
-    for i in range(1,257):
-        contributor=table.findNext('tr').findNext('a').text
+    for i in range(1,5):
+        contributor=table.findNext('tr').findNext('a').text.split()
         table=table.findNext('tr').findNext('a')
         list_contrib.append(contributor)
     df = pd.DataFrame({'Contributors':list_contrib})
@@ -53,7 +54,7 @@ def get_repository(list_contrib):
         for rep in repository:
             star=star+rep["stargazers_count"]  
         nbstar[name]=star
-        meanstar[name]=star/len(repository)
+        meanstar[name]=star/(len(repository)+1)
     sorted(meanstar.values())
     sortednbstar=sorted(meanstar.items(), key=itemgetter(1))
     Sortednbstarmean=pd.DataFrame(sortednbstar,columns=["Contributors", "Mean_Star"])
